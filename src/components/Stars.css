@@ -1,0 +1,39 @@
+.stars {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: transparent;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  box-shadow: 0 0 5px white;
+  animation: twinkle 5s infinite alternate;
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Fondo degradado para el atardecer */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, #ff7e5f, #feb47b); /* Degradado de atardecer */
+  z-index: -2;
+}
